@@ -1,0 +1,8 @@
+{
+  "name": "BloomUp 16.15",
+  "description": "Algorithmic yard restoration and landscape synthesis.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

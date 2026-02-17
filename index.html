@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloomUp | AI Landscape Synthesis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #061a10;
+            --botanical-green: #143627;
+            --soft-sage: #6b7a61;
+            --warm-oat: #efede8;
+            --leaf-accent: #2d5a27;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--warm-oat);
+            color: var(--forest-green);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+        .glass {
+            background: rgba(239, 237, 232, 0.9);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(6, 26, 16, 0.1);
+        }
+        .glass-dark {
+            background: rgba(6, 26, 16, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(6, 26, 16, 0.12);
+        }
+        .loader-dots div {
+            animation: bounce 0.6s infinite alternate;
+            background-color: var(--botanical-green);
+        }
+        .loader-dots div:nth-child(2) { animation-delay: 0.2s; opacity: 0.6; }
+        .loader-dots div:nth-child(3) { animation-delay: 0.4s; opacity: 0.3; }
+        @keyframes bounce {
+            to { transform: translateY(-16px); }
+        }
+        
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--warm-oat); }
+        ::-webkit-scrollbar-thumb { background: var(--botanical-green); border-radius: 10px; }
+        
+        .hero-grain {
+            position: relative;
+        }
+        .hero-grain::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.05;
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+            z-index: 5;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.11.11"
+  }
+}
+</script>
+</head>
+<body class="hero-grain">
+    <div id="root"></div>
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '69944772842976191e05fbee' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: '69944772842976191e05fbef'
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+</body>
+</html>
